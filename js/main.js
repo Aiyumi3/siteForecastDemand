@@ -53,10 +53,10 @@ form.addEventListener("submit", e => {
             contWeather.insertAdjacentHTML('afterbegin', weatherHtml);
         })
         .catch(() => {
-            msg.textContent = "enter a valid city!";
+            msg.innerHTML = "enter a valid city!";
        });
 
-    msg.textContent = "";
+    msg.innerHTML = "";
     form.reset();
     input.focus();
 });
