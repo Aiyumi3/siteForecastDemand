@@ -33,26 +33,26 @@ const priceLessTd = document.getElementById("td_2");
 const priceBoughtTd = document.getElementById("td_3");
 const price2Td = document.getElementById("td_1");
 
-const inputVal1 = input1.value;
-const inputVal2 = input2.value;
-const inputVal3 = input3.value;
-const inputVal4 = input4.value;
-const inputVal5 = input5.value;
-const inputVal6 = input6.value;
-const inputVal7 = input7.value;
-const inputVal8 = input8.value;
-const inputVal9 = input9.value;
-const inputVal10 = input10.value;
-const inputVal11 = input11.value;
-const inputVal12 = input12.value;
-
-const priceVal = price.value;
-const priceLessVal = priceLess.value;
-const priceBoughtVal = priceBought.value;
-const price2Val = price2.value;
-
- btn1.addEventListener("click", display);
+btn1.addEventListener("click", display);
 function display() {
+    const inputVal1 = input1.value;
+    const inputVal2 = input2.value;
+    const inputVal3 = input3.value;
+    const inputVal4 = input4.value;
+    const inputVal5 = input5.value;
+    const inputVal6 = input6.value;
+    const inputVal7 = input7.value;
+    const inputVal8 = input8.value;
+    const inputVal9 = input9.value;
+    const inputVal10 = input10.value;
+    const inputVal11 = input11.value;
+    const inputVal12 = input12.value;
+
+    const priceVal = price.value;
+    const priceLessVal = priceLess.value;
+    const priceBoughtVal = priceBought.value;
+    const price2Val = price2.value;
+
     td1.innerHTML = inputVal1;
     td2.innerHTML = inputVal2;
     td3.innerHTML = inputVal3;
