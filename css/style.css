@@ -1,0 +1,85 @@
+body {
+    pointer-events: auto;
+    margin: 0;
+    background: linear-gradient(-45deg, #8a865b, #440332, #d199ff) no-repeat;
+}
+#content{
+    place-content: center;
+    background-size: 100%;
+    margin: 20px 10px 30px 10px;
+}
+p {
+    font-family: Segoe UI, sans-serif !important;
+    font-size: 20pt;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 0.45px;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 1px 3px 3px #f34c8a, 5px 5px 9px #eeffcd;
+    color: mintcream;
+}
+header{
+    height: 60px;
+    font-family:Segoe UI, sans-serif !important ;
+    font-size:25pt;
+    padding:20px 30px 20px 30px;
+    word-break:normal;
+    color:  #f9e7ef;background-color:plum;
+    text-align:center; opacity:0.9;
+    vertical-align:top;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+footer{
+    font-family:Tahoma, Geneva, sans-serif !important;
+    font-size:18px;
+    display: inherit;
+    font-weight:normal;
+    height: 90px;
+    word-break:normal;
+    color:mintcream;background-color: plum;
+    text-align:center; opacity:0.9;
+    vertical-align: center;
+    padding:20px 30px 20px 30px;text-transform: uppercase;
+}
+.btn{
+    background-color: #250225;
+    color: mintcream;
+    margin: 10px 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    box-shadow: 0 3px  4px 0 #d586c3;
+    padding: 12px 20px;
+    border: none;
+    float: right;
+}
+.btn:hover{ background-color: mediumvioletred}
+input{
+    background-color: lavenderblush;
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 11px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: mintcream;
+    flex-wrap: wrap;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+tr:nth-child(even) {
+    background-color: #c7a3c7;
+}
