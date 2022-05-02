@@ -51,13 +51,7 @@ const priceLessVal = priceLess.value;
 const priceBoughtVal = priceBought.value;
 const price2Val = price2.value;
 
-if(inputVal1.length > 0 && inputVal2.length > 0 && inputVal3.length > 0 && inputVal4.length > 0 && inputVal5.length > 0 &&
-    inputVal6.length > 0 && inputVal7.length > 0 && inputVal8.length > 0 && inputVal9.length > 0 && inputVal10.length > 0 &&
-    inputVal11.length > 0 && inputVal12.length > 0 && priceVal.length > 0 && priceLessVal.length > 0 && priceBoughtVal.length > 0
-    && price2Val.length > 0){
-    btn1.addEventListener("click", display);
-}
-
+ btn1.addEventListener("click", display);
 function display() {
     td1.innerHTML = inputVal1;
     td2.innerHTML = inputVal2;
