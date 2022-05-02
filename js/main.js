@@ -964,21 +964,11 @@ function display() {
     const v3 = nextNum3;
 
     const arrRand = [];
+    const p = [0.1,0.2,0.3,0.2,0.1,0.1];
 
-    const p1 = 0.1;
-    const p2 = 0.2;
-    const p3 = 0.3;
-    const p4 = 0.2;
-    const p5 = 0.1;
-    const p6 = 0.1;
-
-    let income1 = 0;
+    let income = 0;
     let income2 = 0;
     let income3 = 0;
-    let income4 = 0;
-    let income5 = 0;
-    let income6 = 0;
-
     for(let j = 0; j < 6; j++){
         arrRand.push(getRndIntDemand(10000,63000));
 
@@ -987,19 +977,9 @@ function display() {
         let arrSd = [0, arrRand[j]-v1];
         let notSatisfDem = Math.max(...arrSd);
         if (v1 >= arrRand[j]) {
-            income1 = (priceVal*arrRand[0] + priceLessVal*notSold - priceBoughtVal*v1);
-            income2 = (priceVal*arrRand[1] + priceLessVal*notSold - priceBoughtVal*v1);
-            income3 = (priceVal*arrRand[2] + priceLessVal*notSold - priceBoughtVal*v1);
-            income4 = (priceVal*arrRand[3] + priceLessVal*notSold - priceBoughtVal*v1);
-            income5 = (priceVal*arrRand[4] + priceLessVal*notSold - priceBoughtVal*v1);
-            income6 = (priceVal*arrRand[5] + priceLessVal*notSold - priceBoughtVal*v1);
+            income += (priceVal*arrRand[j] + priceLessVal*notSold - priceBoughtVal*v1)*p[j];
         }else{
-            income1 = (priceVal*arrRand[0] - price2Val*notSatisfDem - priceBoughtVal*v1);
-            income2 = (priceVal*arrRand[1] - price2Val*notSatisfDem - priceBoughtVal*v1);
-            income3 = (priceVal*arrRand[2] - price2Val*notSatisfDem - priceBoughtVal*v1);
-            income4 = (priceVal*arrRand[3] - price2Val*notSatisfDem - priceBoughtVal*v1);
-            income5 = (priceVal*arrRand[4] - price2Val*notSatisfDem - priceBoughtVal*v1);
-            income6 = (priceVal*arrRand[5] - price2Val*notSatisfDem - priceBoughtVal*v1);
+            income += (priceVal*arrRand[j] - price2Val*notSatisfDem - priceBoughtVal*v1)*p[j];
         }
 
         arrnSold = [0, v2-arrRand[j]];
@@ -1007,19 +987,9 @@ function display() {
         arrSd = [0, arrRand[j]-v2];
         notSatisfDem = Math.max(...arrSd);
         if (v2 >= arrRand[j]) {
-            income1 = (priceVal*arrRand[0] + priceLessVal*notSold - priceBoughtVal*v2);
-            income2 = (priceVal*arrRand[1] + priceLessVal*notSold - priceBoughtVal*v2);
-            income3 = (priceVal*arrRand[2] + priceLessVal*notSold - priceBoughtVal*v2);
-            income4 = (priceVal*arrRand[3] + priceLessVal*notSold - priceBoughtVal*v2);
-            income5 = (priceVal*arrRand[4] + priceLessVal*notSold - priceBoughtVal*v2);
-            income6 = (priceVal*arrRand[5] + priceLessVal*notSold - priceBoughtVal*v2);
+            income2 += (priceVal*arrRand[j] + priceLessVal*notSold - priceBoughtVal*v2)*p[j];
         }else{
-            income1 = (priceVal*arrRand[0] - price2Val*notSatisfDem - priceBoughtVal*v2);
-            income2 = (priceVal*arrRand[1] - price2Val*notSatisfDem - priceBoughtVal*v2);
-            income3 = (priceVal*arrRand[2] - price2Val*notSatisfDem - priceBoughtVal*v2);
-            income4 = (priceVal*arrRand[3] - price2Val*notSatisfDem - priceBoughtVal*v2);
-            income5 = (priceVal*arrRand[4] - price2Val*notSatisfDem - priceBoughtVal*v2);
-            income6 = (priceVal*arrRand[5] - price2Val*notSatisfDem - priceBoughtVal*v2);
+            income2 += (priceVal*arrRand[j] - price2Val*notSatisfDem - priceBoughtVal*v2)*p[j];
         }
 
         arrnSold = [0, v3-arrRand[j]];
@@ -1027,24 +997,14 @@ function display() {
         arrSd = [0, arrRand[j]-v3];
         notSatisfDem = Math.max(...arrSd);
         if (v3 >= arrRand[j]) {
-            income1 = (priceVal*arrRand[0] + priceLessVal*notSold - priceBoughtVal*v3);
-            income2 = (priceVal*arrRand[1] + priceLessVal*notSold - priceBoughtVal*v3);
-            income3 = (priceVal*arrRand[2] + priceLessVal*notSold - priceBoughtVal*v3);
-            income4 = (priceVal*arrRand[3] + priceLessVal*notSold - priceBoughtVal*v3);
-            income5 = (priceVal*arrRand[4] + priceLessVal*notSold - priceBoughtVal*v3);
-            income6 = (priceVal*arrRand[5] + priceLessVal*notSold - priceBoughtVal*v3);
+            income3 += (priceVal*arrRand[j] + priceLessVal*notSold - priceBoughtVal*v3)*p[j];
         }else{
-            income1 = (priceVal*arrRand[0] - price2Val*notSatisfDem - priceBoughtVal*v3);
-            income2 = (priceVal*arrRand[1] - price2Val*notSatisfDem - priceBoughtVal*v3);
-            income3 = (priceVal*arrRand[2] - price2Val*notSatisfDem - priceBoughtVal*v3);
-            income4 = (priceVal*arrRand[3] - price2Val*notSatisfDem - priceBoughtVal*v3);
-            income5 = (priceVal*arrRand[4] - price2Val*notSatisfDem - priceBoughtVal*v3);
-            income6 = (priceVal*arrRand[5] - price2Val*notSatisfDem - priceBoughtVal*v3);
+            income3 += (priceVal*arrRand[j] - price2Val*notSatisfDem - priceBoughtVal*v3)*p[j];
         }
     }
-    const expectIncome1 = (income1*p1 + income2*p2 + income3*p3 + income4*p4 + income5*p5 + income6*p6).toFixed(2);
-    const expectIncome2 = (income1*p1 + income2*p2 + income3*p3 + income4*p4 + income5*p5 + income6*p6).toFixed(2);
-    const expectIncome3 = (income1*p1 + income2*p2 + income3*p3 + income4*p4 + income5*p5 + income6*p6).toFixed(2);
+    const expectIncome1 = (income).toFixed(2);
+    const expectIncome2 = (income2).toFixed(2);
+    const expectIncome3 = (income3).toFixed(2);
 
 
     const arrRnd = [];
@@ -1093,9 +1053,9 @@ function display() {
     const averageIncome2 = (numI2/100).toFixed(2);
     const averageIncome3 = (numI3/100).toFixed(2);
 
-    const dif1 = averageIncome1 - expectIncome1;
-    const dif2 = averageIncome2 - expectIncome2;
-    const dif3 = averageIncome3 - expectIncome3;
+    const dif1 = (averageIncome1 - expectIncome1).toFixed(2);
+    const dif2 = (averageIncome2 - expectIncome2).toFixed(2);
+    const dif3 = (averageIncome3 - expectIncome3).toFixed(2);
     let str = '';
     if (dif1 > dif2 || dif1 > dif3){
         str = `висновок за результатами імітації: 
