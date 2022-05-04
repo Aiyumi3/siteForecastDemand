@@ -584,7 +584,7 @@ function display() {
     const sumySin = ySin1 + ySin2 + ySin3 + ySin4 + ySin5 + ySin6 + ySin7 + ySin8 + ySin9 + ySin10 + ySin11 + ySin12;
 
     const a1 = (2*sumyCos)/12;
-    const b1 = (2*sumySin)/12
+    const b1 = (2*sumySin)/12;
 
     const ȳt1 = Math.round(averageAll + a1);
     const ȳt2 = Math.round(averageAll + a1*0.866 + b1*0.5);
