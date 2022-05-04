@@ -676,7 +676,7 @@ function display() {
     const t4 = `
     <div id="t4" style="background-position: inherit; position: relative">
         <br/>
-        <p>Аналітична форма сезонної хвилі. Вирівнювання часового ряду по ряду Фурьє</p>
+        <p>Аналітична форма сезонної хвилі. Вирівнювання часового ряду по ряду Фур'є</p>
         <br/>
         <p>по 1-й гармоніці</p>
         <table>
@@ -882,7 +882,7 @@ function display() {
         options: {
             title: {
                 display: true,
-                text: 'вирівнювання часового ряду по ряду Фурьє',
+                text: 'вирівнювання часового ряду по ряду Фур\'є',
                 fontColor: 'white'
             },
             scales: {
