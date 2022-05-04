@@ -629,7 +629,7 @@ function display() {
     const sumy2Sin = y2Sin1 + y2Sin2 + y2Sin3 + y2Sin4 + y2Sin5 + y2Sin6 + y2Sin7 + y2Sin8 + y2Sin9 + y2Sin10 + y2Sin11 + y2Sin12;
 
     const a2 = (2*sumy2Cos)/12;
-    const b2 = (2*sumy2Sin)/12
+    const b2 = (2*sumy2Sin)/12;
 
     const ȳt_1 = Math.round(averageAll + a1 + a2);
     const ȳt_2 = Math.round(averageAll + a1*0.866 + b1*0.5 + a2*0.5 + b2*0.866);
